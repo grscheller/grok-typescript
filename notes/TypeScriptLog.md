@@ -2,8 +2,8 @@
 
 ## Purpose 
 
-To document the steps I have taken to capture my attemps to learn
-the TypeScript web development language, its tooling, and the npm
+To capture the steps I have taken in my attemps to learn the TypeScript
+web development language, its tooling, the Node.js runtime and the npm
 package management ecosystem.
 
 ## Logs:
@@ -23,9 +23,9 @@ a free npm account:
 Setup Two-Factor authentication with Google Authenticator. Saved
 recovery code in a safe place.
 
-Linked npm accout with my grscheller GitHub account.
+Linked npm account with my grscheller GitHub account.
 
-Edited my nmp profile. Gave my full name. Could not change my profile
+Edited my npm profile. Gave my full name. Could not change my profile
 picture. Uses some proprietary service called Gravatar, whose tagline
 is "One profile for everything, everywhere." Well, that is not what
 I want. No way to upload a One Piece related avatar image.
@@ -50,12 +50,12 @@ standalone node files (whatever they are). The license used will be
 
 Any npm packages I write in support of this effort will have their own
 associated npm repos and will use the `Apache 2.0 License`. I may run
-small HTML JavaScript/TypeScript examples from the repo's `gh-pages`.
+small HTML JavaScript/TypeScript examples from the repo's GitHub Pages.
 
 ### 2024-01-21:
 
 Created my first two sets of notes:
 
 * [npm CLI Interface](npm/npm-cli-interface.md)
-* [Node.js .gitignore](node/node-dot-github.md) 
+* [Node.js .gitignore](node/node-dot-gitignore.md) 
 
