@@ -59,3 +59,20 @@ Created my first two sets of notes:
 * [npm CLI Interface](npm/npm-cli-interface.md)
 * [Node.js .gitignore](node/node-dot-gitignore.md) 
 
+### 2024-01-22:
+
+The npm package manager is not the omly game in town.
+
+* [npm](https://www.npmjs.com/package/npm): "node package manager"
+* [Yarn](https://yarnpkg.com/): Yarn package manager
+* [pnpm](https://pnpm.js.org/): performant npm
+
+Seems npm is actually part of Node.js `https://nodejs.org/`. Also, npm
+and Yarn have been one-uping each other for years with pnpm the new kid
+on the block. See this [blog](https://refine.dev/blog/how-to-use-pnpm/)
+for more info on pnpm.
+
+Yarn, npm and pnpm are Open Source projects. Yarn is maintained by
+Meta, Expo.dev & Google; npm is maintained by Microsoft; and pnpm is
+seems to actually be a community driven. They do have about 14 corporate
+sponsoes.
