@@ -12,8 +12,8 @@ package management ecosystem.
 
 Getting an npm account setup.
 
-Well, https://www.npmjs.com/ is done by GitHub. Went there and created
-a free npm account:
+Well, the [npm](https://www.npmjs.com/) repo is maintained by GitHub.
+Went there and created a free npm account:
 
 ```
   username: grscheller
@@ -34,10 +34,10 @@ Probably will not touch npm for a while.
 
 #### Links:
 
-* npm website: `https://www.npmjs.com/`
-* my landing page: `https://www.npmjs.com/~grscheller/`
-* docs: `https://docs.npmjs.com/`
-* npm support: `https://www.npmjs.com/support/`
+* npm website: [https://www.npmjs.com/](https://www.npmjs.com/)
+* my landing page: [https://www.npmjs.com/~grscheller/](https://www.npmjs.com/~grscheller/)
+* docs: [https://docs.npmjs.com/](https://docs.npmjs.com/)
+* npm support: [https://www.npmjs.com/support/](https://www.npmjs.com/support/)
 
 ### 2024-01-21:
 
@@ -61,9 +61,9 @@ Created my first two sets of notes:
 
 ### 2024-01-22:
 
-The npm package manager is not the omly game in town.
+The npm package manager is not the only game in town.
 
-* [npm](https://www.npmjs.com/package/npm): "node package manager"
+* [npm](https://docs.npmjs.com/): "node package manager"
 * [Yarn](https://yarnpkg.com/): Yarn package manager
 * [pnpm](https://pnpm.js.org/): performant npm
 
