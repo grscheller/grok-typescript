@@ -2,7 +2,7 @@
 
 Repo to capture my attempts to learn TypeScript and its associated
 ecosystems. For a chronological account of my journey learning
-typescript, see my TypeScript log [here](notes/TypeScriptLog.md).
+typescript, see my [TypeScript log](notes/TypeScriptLog.md).
 
 ### Notes
 
