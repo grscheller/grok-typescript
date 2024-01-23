@@ -4,6 +4,9 @@ Repo to capture my attempts to learn TypeScript and its associated
 ecosystems. For a chronological account of my journey learning
 typescript, see my [TypeScript log](notes/TypeScriptLog.md).
 
+[Examples](https://grscheller.github.io/grok-typescript/) deployed 
+on this repo's GitHub pages.
+
 ### Notes
 
 #### Node Package Manager (npm)
@@ -13,3 +16,4 @@ typescript, see my [TypeScript log](notes/TypeScriptLog.md).
 #### Node.js open-source, cross-platform JavaScript runtime environment
 
 * [Node.js .gitignore file](/notes/node/node-dot-gitignore.md)
+
