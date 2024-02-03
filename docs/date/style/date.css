@@ -1,0 +1,18 @@
+body {
+  color: #c8c083;
+  background-color: #181616;
+  font-family: cantarell,liberation,arial,helvetica,sans-serif;
+}
+
+p {
+  margin-left: 30px;
+}
+
+h2 {
+  color: #b6927b;
+}
+
+button {
+  color: #000000;
+  background-color: #ccc7aa;
+}

@@ -1,4 +1,4 @@
-# Grokking Typescript Log
+# Grokking TypeScript Devlopment Log
 
 ## Purpose 
 
@@ -6,7 +6,19 @@ To capture the steps I have taken in my attemps to learn the TypeScript
 web development language, its tooling, the Node.js runtime and the npm
 package management ecosystem.
 
-## Logs:
+## Development logs (rev-chronological order):
+
+### 2024-02-03:
+
+Starting my next client side TypeScript (TS) subproject. Since the
+ECMAScript standard defining ECMAScript as a "general-purpose
+programming language," I will use the terms TypeScript and TS to denote
+ECMAScript driven technologies. I've already named this effort
+"Grokking TypeScript" and the developers I work with tend to use the
+term TypeScript when they are not using the term "React."
+
+The next subproject will involve creating a dynamic date related
+webpage.
 
 ### 2024-02-02:
 
@@ -16,7 +28,11 @@ Completed my first client-side JavaScript project called
 I wanted to create a "Hello World" webpage using straight HTML,
 JavaScript and TypeScript. With the
 [ECMAScript® 2023 language specification](https://ecma-international.org/publications-and-standards/standards/ecma-262/)
-it seems that JavaScript is morphing into TypeScript.
+it seems that JavaScript is morphing into TypeScript. According to the
+14th edition of the
+[offical ECMA-262 standard](https://262.ecma-international.org/14.0/),
+the standard defines the ECMAScript 2023 general-purpose programming
+language.
 
 So the goal then became to write a straight HTML version, another using
 embedded JavaScript, and one using external JavaScript.
@@ -24,7 +40,7 @@ embedded JavaScript, and one using external JavaScript.
 Well, using embedded JavaScript worked beautifully, but building the
 webpage leveraging external JS does not seem to be a good use
 case. A better use of external JS is to either dynamic behaviors to the
-webpage or launch an alert popup.
+webpage or launching an alert popup or external app.
 
 So, I will experiment with external JS on the next project.
 
@@ -148,4 +164,3 @@ arrow function syntax as defined in the ECMAScript 2015 standard.
 
 See [TypeScript](https://en.wikipedia.org/wiki/TypeScript) article on
 Wikipedia for examples of type declarations and enumeration types.
-

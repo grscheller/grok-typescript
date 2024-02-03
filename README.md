@@ -1,6 +1,6 @@
 ## Grokking TypeScript
 
-Repo to capture my attempts to learn TypeScript and its associated
+Repo to capture my attempts to learn ECMAScript and its associated
 ecosystems. For a chronological account of my journey learning
 typescript, see my [TypeScript log][1].
 
