@@ -8,6 +8,26 @@ package management ecosystem.
 
 ## Logs:
 
+### 2024-02-02:
+
+Completed my first client-side JavaScript project called
+[hw](https://grscheller.github.io/grok-typescript/index.html#hw).
+
+I wanted to create a "Hello World" webpage using straight HTML,
+JavaScript and TypeScript. With the
+[ECMAScript® 2023 language specification](https://ecma-international.org/publications-and-standards/standards/ecma-262/)
+it seems that JavaScript is morphing into TypeScript.
+
+So the goal then became to write a straight HTML version, another using
+embedded JavaScript, and one using external JavaScript.
+
+Well, using embedded JavaScript worked beautifully, but building the
+webpage leveraging external JS does not seem to be a good use
+case. A better use of external JS is to either dynamic behaviors to the
+webpage or launch an alert popup.
+
+So, I will experiment with external JS on the next project.
+
 ### 2024-01-21:
 
 Getting an npm account setup.
