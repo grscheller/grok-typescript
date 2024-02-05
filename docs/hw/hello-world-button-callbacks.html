@@ -3,18 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Hello World - embedded</title>
+  <title>Hello World - HTML Callbacks</title>
   <link rel="stylesheet" href="./style/hw.css">
 </head>
 
 <body>
-  <h2>Example Hello World with embedded JavaScript</h2>
+  <h2>Example Hello World with callbacks</h2>
   <p id="hw">
     Greeting to be displayed here.
   </p>
   <button type="button"
     onClick='document.getElementById("hw").innerHTML="<b>Hello, World!</b>"'>
     Click the button
+  </button>
+  <button type="button"
+    onClick='document.getElementById("hw").innerHTML="Try again."'>
+    Reset
   </button>
 </body>
 
