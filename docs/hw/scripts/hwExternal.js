@@ -1,8 +1,8 @@
-const clickButton = document.createElement("button");
-clickButton.textContent = "click me";
+const clickButton = document.createElement('button')
+clickButton.textContent = "click me"
 
-const resetButton = document.createElement("button");
-resetButton.textContent = "reset";
+const resetButton = document.createElement('button')
+resetButton.textContent = "reset"
 resetButton.disabled = true
 
 function updateGreeting() {
@@ -12,13 +12,13 @@ function updateGreeting() {
 }
 
 function resetGreeting() {
-    document.getElementById("greeting").innerHTML = "Try again."
+    document.getElementById("greeting").innerHTML = 'Try again.'
     clickButton.disabled = false
     resetButton.disabled = true
 }
 
-clickButton.addEventListener("click", updateGreeting);
-resetButton.addEventListener("click", resetGreeting);
+clickButton.addEventListener("click", updateGreeting)
+resetButton.addEventListener("click", resetGreeting)
 
 document.body.appendChild(clickButton)
 document.body.appendChild(resetButton)

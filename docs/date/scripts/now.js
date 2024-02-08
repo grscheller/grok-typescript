@@ -1,29 +1,31 @@
 function updateNow(currDateDisp, currTimeDisp) {
-  const now = new Date();
-  const month = now.getMonth()
-  const date = now.getDate()
-  const year = now.getFullYear()
-  const hour = now.getHours()
-  const min = now.getMinutes()
-  const sec = now.getseconds()
+    const now = new Date()
+    const month = now.getMonth().toString()
+    const date = now.getDate().toString()
+    const year = now.getFullYear().toString()
+    const hour = now.getHours().toString()
+    const min = now.getMinutes().toString()
+    const sec = now.getseconds().toString()
 
-  const dateStr = 'Current date: <b>' + month + '/' + date + '/' + year + '</b>'
-  const timeStr = 'Current time: <b>' + hour + ':' + min + ':' + sec + '</b>'
+    const dateStr = 'Current date is <b>' + month + '/' + date + '/' + year + '</b>'
+    const timeStr = 'Current time is <b>' + hour + ':' + min + ':' + sec + '</b>'
 
-  currDateDisp.innerHTML = dateStr;
-  currTimeDisp.innerHTML = timeStr;
+    currDateDisp.innerHTML = dateStr
+    currTimeDisp.innerHTML = timeStr
 }
 
-const currDateDisplay = document.createElement('p');
-currDateDisplay.innerHTML = 'Current date:';
+const currentDateDisplay = document.createElement('p')
+currentDateDisplay.innerHTML = 'Current date:'
 
-const currTimeDisplay = document.createElement('p');
-currTimeDisplay.innerHTML = 'Current time:';
+const currentTimeDisplay = document.createElement('p')
+currentTimeDisplay.innerHTML = 'Current time:'
 
-const nowButton = document.createElement("button");
-nowButton.textContent = 'Update Now';
-nowButton.addEventListener('click', () => updateNow(currDateDisplay, currTimeDisplay));
+const nowButton = document.createElement("button")
+nowButton.textContent = 'Update date & time'
+nowButton.addEventListener('click', () => updateNow(currentDateDisplay, currentTimeDisplay))
 
+document.body.appendChild(currentDateDisplay)
+document.body.appendChild(currentTimeDisplay)
 document.body.appendChild(nowButton)
-document.body.appendChild(currDateDisplay)
-document.body.appendChild(currTimeDisplay)
+
+updateNow(currentDateDisplay, currentDateDisplay)

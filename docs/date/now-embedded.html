@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Now-Embedded</title>
+  <link rel="stylesheet" href="style/date.css">
+</head>
+
+<body>
+  <h2>Explore Date API using the current moment</h2>
+    <p id='date'>
+      Current date:
+    </p>
+    <p id='time'>
+      Current time:
+    </p>
+    <script>
+      function updateNow() {
+          const now = new Date()
+          const month = now.getMonth().toString()
+          const date = now.getDate().toString()
+          const year = now.getFullYear().toString()
+          const hour = now.getHours().toString()
+          const min = now.getMinutes().toString()
+          const sec = now.getseconds().toString()
+
+          const dateStr = 'Current date: <b>' + month + '/' + date + '/' + year + '</b><br>'
+          const timeStr = 'Current time: <b>' + hour + ':' + min + ':' + sec + '</b><br>'
+
+          document.getElementById('date').innerhtml = dateStr
+          document.getElementById('time').innerhtml = timeStr
+      }
+
+      const nowButton = document.createElement("button")
+      nowButton.textContent = 'Update date & time'
+      nowButton.addEventListener('click', updateNow)
+      document.body.appendChild(nowButton)
+      updateNow(currentDateDisplay, currentDateDisplay)
+    </script>
+</body>
+
+</html>
