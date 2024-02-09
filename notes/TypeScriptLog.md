@@ -1,6 +1,6 @@
 # Grokking TypeScript Devlopment Log
 
-## Purpose 
+## Purpose
 
 To capture the steps I have taken in my attemps to learn the TypeScript
 web development language, its tooling, the Node.js runtime and the npm
@@ -8,7 +8,14 @@ package management ecosystem.
 
 ## Development logs (rev-chronological order):
 
-### 2024-02-09:
+### 2024-02-08:
+
+Got the "now webpage" working in docs/dates subproject. My coworker
+Pavin suggested passing an array of webpage elements to a callback
+function instead of the individual elements themselves. Not sure why
+this would make any difference. I need to investigate.
+
+### 2024-02-07:
 
 What I have been doing is usng a combination of embedded & extenal JS to
 create structure and give dynamic behaviors to HTML webpages. I got
@@ -38,7 +45,7 @@ Since functions are first class objects in TS, FP seems very natural
 with it. In C++ objects are structs. In Java functions are objects with
 call methods. In Python everything is an object including classes. In TS
 classes are functions and what the `new` keyword does is not quite what
-one would naively expect.
+one would naively expect. Maybe some sort of "prototyping" mechanism?
 
 ### 2024-02-03:
 
@@ -123,7 +130,7 @@ small HTML JavaScript/TypeScript examples from the repo's GitHub Pages.
 Created my first two sets of notes:
 
 * [npm CLI Interface](npm/npm-cli-interface.md)
-* [Node.js .gitignore](node/node-dot-gitignore.md) 
+* [Node.js .gitignore](node/node-dot-gitignore.md)
 
 ### 2024-01-22:
 
@@ -145,7 +152,7 @@ sponsoes.
 
 ### 2024-01-22:
 
-Education resource for HTML, CCS, Javascript: 
+Education resource for HTML, CCS, Javascript:
 [https://www.w3schools.com/](https://www.w3schools.com/)
 
 I am not particularly impressed by the tutorials, but it has quizes that
@@ -167,13 +174,13 @@ client side JavaScript to implement webpage behaviors, often
 incorporating third-party libraries. All major web browsers have
 dedicated JavaScript engines to execute the code on end user devices.
 
-Today, JavaScript is a high-level programming language which 
+Today, JavaScript is a high-level programming language which
 
 * is dynamically typed
 * is just-in-time compiled
 * uses prototype-based object-orientation
 * has first class functions
-* supports functional, imperative and event-driven paradigms  
+* supports functional, imperative and event-driven paradigms
 * has APIs for text, dates, regular expressions, data structures
 * suports the Document Object Model [DOM](dom/dom-overview.md)
 
