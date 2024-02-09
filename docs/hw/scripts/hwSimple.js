@@ -1,5 +1,5 @@
 function greeting() {
-  document.getElementById("greeting").innerHTML = "Hello World!";
+  document.getElementById("greeting").innerHTML = "Hello World!"
 }
 
 greeting()

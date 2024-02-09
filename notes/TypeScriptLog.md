@@ -8,14 +8,46 @@ package management ecosystem.
 
 ## Development logs (rev-chronological order):
 
+### 2024-02-09:
+
+What I have been doing is usng a combination of embedded & extenal JS to
+create structure and give dynamic behaviors to HTML webpages. I got
+a simple JS button webapps that display "Hello World!" in `<p>...</p>`
+blocks. The JS I write inteacts with something internal to web browsers
+called the DOM. If I replace the `.js` extension with `.ts` the TS LSP
+server starts giving me very useful information. Seems TS tooking looks
+for a `tsconfig.json` file in the "project" root directory. There also
+are `jsconfig.json` files too. There is a CLI tool called `tsc` for
+TypeScript compiler. With the right external tooling, you can embed TS
+in HTML documents. Lots of posts from 10 years ago state why would
+anyone want to take the "performance hit" of embedding TS when you can
+transpile (sourceto-source) TS to JS. Now it seems that ECMAScript
+standard is morphing JS into TS.
+
+Things to do going forward:
+
+* figure out why my docs/dates subproject is failing
+* ensure JS and TS CLI tooling is properly installed and configured
+* ensure Neovim LSP is properly configured for both JS & TS
+* understand what this DOM thing is and how browsers implement it
+* understand the ECMAScript language syntax and paradigms
+* investigate other TS backends
+* learn TS Functional Programming
+
+Since functions are first class objects in TS, FP seems very natural
+with it. In C++ objects are structs. In Java functions are objects with
+call methods. In Python everything is an object including classes. In TS
+classes are functions and what the `new` keyword does is not quite what
+one would naively expect.
+
 ### 2024-02-03:
 
 Starting my next client side TypeScript (TS) subproject. Since the
 ECMAScript standard defining ECMAScript as a "general-purpose
 programming language," I will use the terms TypeScript and TS to denote
-ECMAScript driven technologies. I've already named this effort
-"Grokking TypeScript" and the developers I work with tend to use the
-term TypeScript when they are not using the term "React."
+ECMAScript driven technologies. I've already named this effort "Grokking
+TypeScript" and the developers I work with tend to use the term
+TypeScript when they are not using the term "React."
 
 The next subproject will involve creating a dynamic date related
 webpage.
@@ -26,20 +58,19 @@ Completed my first client-side JavaScript project called
 [hw](https://grscheller.github.io/grok-typescript/index.html#hw).
 
 I wanted to create a "Hello World" webpage using straight HTML,
-JavaScript and TypeScript. With the
-[ECMAScript® 2023 language specification](https://ecma-international.org/publications-and-standards/standards/ecma-262/)
+JavaScript and TypeScript. With the [ECMAScript® 2023 language
+specification](https://ecma-international.org/publications-and-standards/standards/ecma-262/)
 it seems that JavaScript is morphing into TypeScript. According to the
-14th edition of the
-[offical ECMA-262 standard](https://262.ecma-international.org/14.0/),
-the standard defines the ECMAScript 2023 general-purpose programming
-language.
+14th edition of the [offical ECMA-262
+standard](https://262.ecma-international.org/14.0/), the standard
+defines the ECMAScript 2023 general-purpose programming language.
 
 So the goal then became to write a straight HTML version, another using
 embedded JavaScript, and one using external JavaScript.
 
 Well, using embedded JavaScript worked beautifully, but building the
-webpage leveraging external JS does not seem to be a good use
-case. A better use of external JS is to either dynamic behaviors to the
+webpage leveraging external JS does not seem to be a good use case.
+A better use of external JS is to either dynamic behaviors to the
 webpage or launching an alert popup or external app.
 
 So, I will experiment with external JS on the next project.
@@ -51,10 +82,7 @@ Getting an npm account setup.
 Well, the [npm](https://www.npmjs.com/) repo is maintained by GitHub.
 Went there and created a free npm account:
 
-```
-  username: grscheller
-  password: <random gibberish>
-```
+``` username: grscheller password: <random gibberish> ```
 
 Setup Two-Factor authentication with Google Authenticator. Saved
 recovery code in a safe place.
@@ -62,18 +90,20 @@ recovery code in a safe place.
 Linked npm account with my grscheller GitHub account.
 
 Edited my npm profile. Gave my full name. Could not change my profile
-picture. Uses some proprietary service called Gravatar, whose tagline
-is "One profile for everything, everywhere." Well, that is not what
-I want. No way to upload a One Piece related avatar image.
+picture. Uses some proprietary service called Gravatar, whose tagline is
+"One profile for everything, everywhere." Well, that is not what I want.
+No way to upload a One Piece related avatar image.
 
 Probably will not touch npm for a while.
 
 #### Links:
 
 * npm website: [https://www.npmjs.com/](https://www.npmjs.com/)
-* my landing page: [https://www.npmjs.com/~grscheller/](https://www.npmjs.com/~grscheller/)
+* my landing page:
+[https://www.npmjs.com/~grscheller/](https://www.npmjs.com/~grscheller/)
 * docs: [https://docs.npmjs.com/](https://docs.npmjs.com/)
-* npm support: [https://www.npmjs.com/support/](https://www.npmjs.com/support/)
+* npm support:
+[https://www.npmjs.com/support/](https://www.npmjs.com/support/)
 
 ### 2024-01-21:
 
@@ -81,8 +111,8 @@ Created grscheller/grok-typescript Repo on GitHub.
 
 This repo is the project. It will document my learning of TypeScript and
 host my notes. It will contain mostly Markdown files, HTML files, and
-standalone node files (whatever they are). The license used will be
-`The Unlicence`.
+standalone node files (whatever they are). The license used will be `The
+Unlicence`.
 
 Any npm packages I write in support of this effort will have their own
 associated npm repos and will use the `Apache 2.0 License`. I may run
