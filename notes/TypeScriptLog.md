@@ -8,6 +8,34 @@ package management ecosystem.
 
 ## Development logs (rev-chronological order):
 
+### 2024-02-09:
+On Arch Linux see what tooling is available,
+
+  $ pacman -Ss 'typescript'
+    extra/deno 1.40.3-1
+        A secure runtime for JavaScript and TypeScript
+    extra/texlive-context 2023.66594-20 (texlive)
+        TeX Live - ConTeXt and packages
+    extra/ts-node 10.9.2-1
+        TypeScript execution and REPL for node.js, with source map support
+    extra/typescript 5.3.3-1
+        JavaScript with syntax for types
+    extra/typescript-language-server 4.3.2-1
+        Language Server Protocol (LSP) implementation for TypeScript using tsserver
+    extra/typescript-svelte-plugin 0.3.37-1
+        TypeScript plugin for Svelte intellisense
+
+Installig some tooling,
+
+    $ sudo pacman -Syu typescript ts-node typescript-language-server deno
+    ...
+    Package (4)                       New Version  Net Change  Download Size
+    
+    extra/deno                        1.40.3-1      87.51 MiB      28.69 MiB
+    extra/ts-node                     10.9.2-1       5.76 MiB       0.64 MiB
+    extra/typescript                  5.3.3-1       30.53 MiB       2.33 MiB
+    extra/typescript-language-server  4.3.2-1        2.12 MiB       0.37 MiB
+
 ### 2024-02-08:
 
 Got the "now webpage" working in docs/dates subproject. My coworker
