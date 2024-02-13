@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World - Static HTML</title>
+  <link rel="stylesheet" href="style/hw.css">
+</head>
+
+<body>
+  <h2>Example Hello World with alert and concole</h2>
+  <script>
+    const alertButton = document.createElement("button")
+    alertButton.textContent = "alert me"
+
+    const consoleButton = document.createElement("button")
+    consoleButton.textContent = "log me"
+
+    function alertMe() {
+      alert("Hello World!")
+      console.clear()
+    }
+
+    function logMe() {
+      console.log("Hello World!")
+    }
+
+    alertButton.addEventListener("click", alertMe)
+    consoleButton.addEventListener("click", logMe)
+
+    document.body.appendChild(alertButton)
+    document.body.appendChild(consoleButton)
+  </script>
+</body>
+
+</html>

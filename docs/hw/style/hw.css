@@ -6,6 +6,7 @@ body {
 
 p {
   margin-left: 30px;
+  font-size: 24px;
 }
 
 h2 {
@@ -15,4 +16,9 @@ h2 {
 button {
   color: #000000;
   background-color: #ccc7aa;
+  font: bold;
+  font-size: 24px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
