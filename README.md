@@ -1,29 +1,30 @@
-## Grokking TypeScript
+# Grokking TypeScript
 
 Repo to capture my attempts to learn ECMAScript and its associated
 ecosystems. For a chronological account of my journey learning
-typescript, see my [TypeScript log][1].
+typescript, see [Notes.md](Notes.md).
 
-See deployed [Examples][2] of various subprojects from this repo.
+See deployed [Examples][1] of various subprojects from this repo.
 
-### Notes
+## Public Domain Declaration
 
-#### External documentation standard
+<p xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+  <a rel="license"
+     href="http://creativecommons.org/publicdomain/zero/1.0/">
+     <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png"
+          style="border-style: none;"
+          alt="CC0"></a>
 
-* Official [ECMAScript ECMA-262][3] standard, 14th edition, June 2023
+  To the extent possible under law,
+  [Geoffrey R. Scheller](https://github.com/grscheller)
+  has waived all copyright and related or neighboring rights
+  to [grscheller/grok-lua](https://github.com/grscheller/grok-typescript).
+  This work is published from the United States of America.
+</p>
 
-#### Node Package Manager (npm)
-
-* [npm cli-command interface][4]
-
-#### Node.js open-source, cross-platform JavaScript runtime environment
-
-* [Node.js .gitignore file][5]
+See [LICENSE](LICENSE) for details.
 
 ---
 
-[1]: notes/TypeScriptLog.md
-[2]: https://grscheller.github.io/grok-typescript/
-[3]: https://262.ecma-international.org/14.0/
-[4]: notes/npm/npm-cli-interface.md
-[5]: notes/node/node-dot-gitignore.md
+[1]: https://grscheller.github.io/grok-typescript/
