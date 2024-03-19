@@ -20,16 +20,32 @@ standard is the 14th edition from June 2023.
 #### Node.js
 
 Node.js is an open-source, cross-platform JavaScript runtime
-environment.
+environment. The name also refers to the non-profit organization
+develops the runtime.
 
-* [Node.js .gitignore file](notes/node/node-dot-gitignore.md)
+* [Node.js website](https://nodejs.org)
+* [Node.js on GitHub](https://github.com/nodejs)
+* [GitHub node repo](https://github.com/nodejs/node)
+* [about Node.js](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
+* [notes on Node.js .gitignore file](notes/node/node-dot-gitignore.md)
 
 #### Node Package Manager (npm)
 
+The term [npm](https://www.npmjs.com/about) can mean many things.
+
 * [npm website](https://www.npmjs.com/)
 * [npm support](https://www.npmjs.com/support/)
+* [npm](https://docs.npmjs.com/): "node package manager"
 * [grscheller npm landing page](https://www.npmjs.com/~grscheller/)
 * [notes on npm CLI interface](notes/npm/npm-cli-interface.md)
+
+#### Other Node.js package managers
+
+The npm package manager is part of `Nome.js`. It is not the only
+package manager available for Node.js.
+
+* [Yarn](https://yarnpkg.com/): yarn package manager
+* [pnpm](https://pnpm.js.org/): performant npm
 
 #### Document Object Model (DOM)
 
@@ -71,7 +87,7 @@ Today, JavaScript is a high-level programming language which
 * has first class functions
 * supports functional, imperative and event-driven paradigms
 * has APIs for text, dates, regular expressions, data structures
-* suports the Document Object Model [DOM](dom/dom-overview.md)
+* suports the Document Object Model [DOM](notes/dom/dom-overview.md)
 
 See [JS Syntax](https://en.wikipedia.org/wiki/JavaScript_syntax) for
 non-trivial examples of JS syntax.
@@ -282,7 +298,9 @@ Installing some tooling,
 
 ### 2024-03-19: 
 
-Decided to modeling these notes after my grok-lua repo.
+Decided to modeling these notes after my
+[grscheller/grok-lua](https://github.com/grscheller/grok-lua)
+repo.
 
 ---
 
