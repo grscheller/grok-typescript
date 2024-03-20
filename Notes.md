@@ -51,15 +51,17 @@ package manager available for Node.js.
 
 #### Node.js vs npm
 
-After several hours of web searching, I think is correct,
+After several hours of web searching, I think this probably correct,
 
-* Node.js is a JavaScript framework maintained by the non-profit OpenJS Foundation
+* Node.js maintained by the non-profit OpenJS Foundation
+  * Node.js is a JavaScript framework
   * Node,js source code can be found [here](https://github.com/nodejs/node) 
 * npm (the cmdline utility) is an open source package manager for Node.js
-  * the source code is maintained by GitHub [here](https://github.com/npm/cli)
+  * npm is a package manager for the Node.js framework
+  * source code, maintained by GitHub, can be found [here](https://github.com/npm/cli)
 * npm (the company) was bought by and absorbed into GitHub in 2020
   * GitHub was bought by Microsoft in 2018
-* npm (the registry) is a service "to the community" of GitHub
+* npm (the registry) is a service "to the community" provided by GitHub
   * this service is branded npm
 
 #### Document Object Model (DOM)
