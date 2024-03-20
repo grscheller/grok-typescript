@@ -25,7 +25,7 @@ develops the runtime.
 
 * [Node.js website](https://nodejs.org)
 * [Node.js on GitHub](https://github.com/nodejs)
-* [GitHub node repo](https://github.com/nodejs/node)
+* [GitHub repo](https://github.com/nodejs/node)
 * [about Node.js](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
 * [notes on Node.js .gitignore file](notes/node/node-dot-gitignore.md)
 
@@ -35,9 +35,11 @@ The term [npm](https://www.npmjs.com/about) can mean many things.
 
 * [npm website](https://www.npmjs.com/)
 * [npm support](https://www.npmjs.com/support/)
-* [npm](https://docs.npmjs.com/): "node package manager"
+* [npm docs](https://docs.npmjs.com/)
 * [grscheller npm landing page](https://www.npmjs.com/~grscheller/)
 * [notes on npm CLI interface](notes/npm/npm-cli-interface.md)
+
+Looks like npm the registry is a Micro$oft loss leader.
 
 #### Other Node.js package managers
 
@@ -46,6 +48,19 @@ package manager available for Node.js.
 
 * [Yarn](https://yarnpkg.com/): yarn package manager
 * [pnpm](https://pnpm.js.org/): performant npm
+
+#### Node.js vs npm
+
+After several hours of web searching, I think is correct,
+
+* Node.js is a JavaScript framework maintained by the non-profit OpenJS Foundation
+  * Node,js source code can be found [here](https://github.com/nodejs/node) 
+* npm (the cmdline utility) is an open source package manager for Node.js
+  * the source code is maintained by GitHub [here](https://github.com/npm/cli)
+* npm (the company) was bought by and absorbed into GitHub in 2020
+  * GitHub was bought by Microsoft in 2018
+* npm (the registry) is a service "to the community" of GitHub
+  * this service is branded npm
 
 #### Document Object Model (DOM)
 
@@ -87,7 +102,7 @@ Today, JavaScript is a high-level programming language which
 * has first class functions
 * supports functional, imperative and event-driven paradigms
 * has APIs for text, dates, regular expressions, data structures
-* suports the Document Object Model [DOM](notes/dom/dom-overview.md)
+* supports the Document Object Model [DOM](notes/dom/dom-overview.md)
 
 See [JS Syntax](https://en.wikipedia.org/wiki/JavaScript_syntax) for
 non-trivial examples of JS syntax.
@@ -126,7 +141,10 @@ small HTML JavaScript/TypeScript examples from the repo's GitHub Pages.
 
 Well, the
 [npm](https://www.npmjs.com/)
-repo is maintained by GitHub. Went there and created a free npm account:
+[npm](https://www.npmjs.com/)
+repo is maintained by GitHub. It directed me to
+[npm](https://www.npmjs.com/)
+Went there and created a free npm account:
 `username: grscheller password: <random gibberish>`
 
 Setup Two-Factor authentication with Google Authenticator. Saved
