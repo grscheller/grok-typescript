@@ -21,7 +21,7 @@ standard is the 14th edition from June 2023.
 
 Node.js is an open-source, cross-platform JavaScript runtime
 environment. The name also refers to the non-profit organization
-develops the runtime.
+which develops the runtime.
 
 * [Node.js website](https://nodejs.org)
 * [Node.js on GitHub](https://github.com/nodejs)
@@ -43,7 +43,7 @@ Looks like npm the registry is a Micro$oft loss leader.
 
 #### Other Node.js package managers
 
-The npm package manager is part of `Nome.js`. It is not the only
+The npm package manager is part of `Node.js`. It is not the only
 package manager available for Node.js.
 
 * [Yarn](https://yarnpkg.com/): yarn package manager
@@ -55,7 +55,7 @@ After several hours of web searching, I think this probably correct,
 
 * Node.js maintained by the non-profit OpenJS Foundation
   * Node.js is a JavaScript framework
-  * Node,js source code can be found [here](https://github.com/nodejs/node) 
+  * Node.js source code can be found [here](https://github.com/nodejs/node) 
 * npm (the cmdline utility) is an open source package manager for Node.js
   * npm is a package manager for the Node.js framework
   * source code, maintained by GitHub, can be found [here](https://github.com/npm/cli)
@@ -86,7 +86,7 @@ that I think will be useful to test my knowledge.
 
 The rest of this section is taken, more or less, from Wikipedia. I was
 looking for a "language definition" for JavaScript and I will need to
-invetigate the various ECMAScript standards for that. In the mean time,
+investigate the various ECMAScript standards for that. In the mean time,
 I stumbled upon a treasure trove of factoids on Wikipedia. In this
 section, I will paraphrases heavily from Wikipedia.
 
@@ -94,7 +94,7 @@ JavaScript (JS) programming language, along side HTML and CSS, is a core
 technology of the World Wide Web. As of 2023, 98.7% of websites use
 client side JavaScript to implement webpage behaviors, often
 incorporating third-party libraries. All major web browsers have
-dedicated JavaScript engines to execute the code on end user devices.
+dedicated JavaScript engines to execute the code on end-user devices.
 
 Today, JavaScript is a high-level programming language which
 
@@ -109,7 +109,7 @@ Today, JavaScript is a high-level programming language which
 See [JS Syntax](https://en.wikipedia.org/wiki/JavaScript_syntax) for
 non-trivial examples of JS syntax.
 
-TypeScript (TS) is an open-source superset of JavaScript developed by
+TypeScript (TS) is an open-source super set of JavaScript developed by
 Microsoft. TS adds static typing via optional type annotations to JS. It
 is designed for the development of large applications and compiles down
 to JS. All JS programs are syntactically valid TypeScript, but they can
@@ -142,7 +142,6 @@ small HTML JavaScript/TypeScript examples from the repo's GitHub Pages.
 #### Getting an npm account setup
 
 Well, the
-[npm](https://www.npmjs.com/)
 [npm](https://www.npmjs.com/)
 repo is maintained by GitHub. It directed me to
 [npm](https://www.npmjs.com/)
@@ -323,4 +322,18 @@ Decided to modeling these notes after my
 repo.
 
 ---
+
+### 2025-02-19:
+
+Saw an example of TS code that looked really functional. Got me inspired
+again.
+
+The current official
+[ECMAScript ECMA-262](https://262.ecma-international.org/15.0/)
+standard is now the 15th edition from June 2024.
+
+Instead of Arch Linux, I have moved to the Alpha version of Pop!OS.
+
+The current version of npm installed on Pop!OS is 9.2.0. The latest
+LTS version is 22.14.0 and latest development version is 23.8.0.
 

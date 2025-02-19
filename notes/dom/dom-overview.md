@@ -1,7 +1,7 @@
 # Document Object Model (DOM)
 
 DOM is a cross-platform, cross-language API from the World Wide Web
-Consortium (W3C). DOM treats HTML or XML documents tree structures.
+Consortium (W3C). DOM manipulates HTML or XML documents tree structures.
 
 In HTML DOM, every element is a node
 
@@ -27,7 +27,7 @@ Eaxample, the follwing HTML document
    </html>
 ```
 
-which is parsed into a DOM tree of the form
+is parsed into a DOM tree of the form
 
 * Document (root)
   * html
@@ -41,7 +41,7 @@ which is parsed into a DOM tree of the form
         * "Go thee to a nunnery!"
 
 Text is contained in text nodes. Text nodes are always leaf nodes. A DOM
-tree can be manipulated using JavaScript or amother programming
+tree can be manipulated using JavaScript or another programming
 language. Common tasks include navigating the tree, adding, removing,
 and modifying nodes, and getting/setting properties of nodes.
 
@@ -63,8 +63,8 @@ Examples of DOM API methods include
    root.appendChild(child);
 ```
 
-Web browsers use layout engines to parse HTML into a DOM to varying
-degress of complianceo.
+Web browsers use layout engines to parse HTML into a DOM to a varying
+degree of compliance.
 
 * DOM implementations
 * Trident/MSHTML - Internet Explorer
@@ -80,3 +80,4 @@ DOM implementations.
 Inspection tool:
 
 * DOM Inspector - contained in Firefox
+
