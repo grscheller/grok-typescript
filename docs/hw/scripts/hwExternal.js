@@ -22,3 +22,4 @@ resetButton.addEventListener("click", resetGreeting)
 
 document.body.appendChild(clickButton)
 document.body.appendChild(resetButton)
+

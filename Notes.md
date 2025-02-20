@@ -230,8 +230,8 @@ The next project will involve creating a dynamic date related webpage.
 
 #### Reflections
 
-What I have been doing is usng a combination of embedded & extenal JS to
-create structure and give dynamic behaviors to HTML webpages. I got
+What I have been doing is using a combination of embedded & extenal JS
+to create structure and give dynamic behaviors to HTML webpages. I got
 a simple JS button webapps that display "Hello World!" in `<p>...</p>`
 blocks. The JS I write interacts with something internal to web browsers
 called the DOM. If I replace the `.js` extension with `.ts` the TS LSP
@@ -336,4 +336,80 @@ Instead of Arch Linux, I have moved to the Alpha version of Pop!OS.
 
 The current version of npm installed on Pop!OS is 9.2.0. The latest
 LTS version is 22.14.0 and latest development version is 23.8.0.
+
+### 2025-02-20:
+
+* getting a feel for what I previously wrote
+* added a new-line at end of last line in all files
+  * old POSIX compliant requirement no one follows anymore
+  * HTML/JavaScript so lenient that most websites are crap
+  * HTML was originally intended for "dumb" end-users 
+    * Mozilla and Micro$oft browsers just ignores errors
+    * Google browsers followed in this tradition
+* goal for today is to set up node.js environment
+
+### 2025-02-20:
+
+#### Setting up Node.js
+
+There is a POSIX shell based package manager called `nvm`. Install
+script too heavy handed with my shell dotfiles. There is a 3rd party
+`fish` version out in the wild. I think these are overkill.
+
+The default npm that comes with Pop!OS is way too old.
+
+```
+   $ node --version
+   v18.19.1
+   $ npm --version
+   9.2.0
+```
+
+From the [Node.js Download](https://nodejs.org/en/download) I down
+loaded the latest LTS version: v22.14.0 and unpacked the tarball here:
+`~/devel/node_lts`. After unpacking
+
+```
+   $ cd ~/devel/node_lts
+
+   $ ls
+   node-v22.14.0-linux-x64  node-v22.14.0-linux-x64.tar.xz
+
+   $ ls node-v22.14.0-linux-x64/
+   bin  CHANGELOG.md  include  lib  LICENSE  README.md  share
+
+   $ ls node-v22.14.0-linux-x64/bin
+   corepack  node  npm  npx
+
+   $ ls -l node-v22.14.0-linux-x64/bin/
+   total 117364
+   lrwxrwxrwx 1 grs grs        45 Feb 10 17:08 corepack -> ../lib/node_modules/corepack/dist/corepack.js
+   -rwxr-xr-x 1 grs grs 120177224 Feb 10 17:08 node
+   lrwxrwxrwx 1 grs grs        38 Feb 10 17:08 npm -> ../lib/node_modules/npm/bin/npm-cli.js
+   lrwxrwxrwx 1 grs grs        38 Feb 10 17:08 npx -> ../lib/node_modules/npm/bin/npx-cli.js
+
+   $ file npm corepack npx node
+   npm:      symbolic link to ../lib/node_modules/npm/bin/npm-cli.js
+   corepack: symbolic link to ../lib/node_modules/corepack/dist/corepack.js
+   npx:      symbolic link to ../lib/node_modules/npm/bin/npx-cli.js
+   node:     ELF 64-bit LSB executable, x86-64, version 1 (GNU/Linux),
+             dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2,
+             BuildID[sha1]=ea9b4310844c696f0a090a9ee624f49bd3d7ab52,
+             for GNU/Linux 3.2.0, with debug_info, not stripped, too many
+             notes (256)
+```
+
+What the hell are `corepack` and `npx`? 
+
+* `corepack` is an opt-in experimental Node.js script
+  * bridges Node.js projects and the package manager
+  * lets you use Yarn, npm, and pnpm without (you) having to install them
+* `npx` allows Node.js packages to be run without installing them globally
+  * `npm` is a package manager for installing and managing dependencies
+
+I'll ignore `corepack` and `npx` for now. I'd rather control my
+environment.
+
+Next I updated my fish environment to find the LTS stable environment
+before the system node infrastructure.
 
