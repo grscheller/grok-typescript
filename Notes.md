@@ -55,7 +55,7 @@ After several hours of web searching, I think this probably correct,
 
 * Node.js maintained by the non-profit OpenJS Foundation
   * Node.js is a JavaScript framework
-  * Node.js source code can be found [here](https://github.com/nodejs/node) 
+  * Node.js source code can be found [here](https://github.com/nodejs/node)
 * npm (the cmdline utility) is an open source package manager for Node.js
   * npm is a package manager for the Node.js framework
   * source code, maintained by GitHub, can be found [here](https://github.com/npm/cli)
@@ -302,11 +302,11 @@ On Arch Linux let's see what tooling is available,
 
 Installing some tooling,
 
-```
+```fish
     $ sudo pacman -Syu typescript ts-node typescript-language-server deno
     ...
     Package (4)                       New Version  Net Change  Download Size
-    
+
     extra/deno                        1.40.3-1      87.51 MiB      28.69 MiB
     extra/ts-node                     10.9.2-1       5.76 MiB       0.64 MiB
     extra/typescript                  5.3.3-1       30.53 MiB       2.33 MiB
@@ -315,7 +315,7 @@ Installing some tooling,
 
 ---
 
-### 2024-03-19: 
+### 2024-03-19:
 
 Decided to modeling these notes after my
 [grscheller/grok-lua](https://github.com/grscheller/grok-lua)
@@ -343,7 +343,7 @@ LTS version is 22.14.0 and latest development version is 23.8.0.
 * added a new-line at end of last line in all files
   * old POSIX compliant requirement no one follows anymore
   * HTML/JavaScript so lenient that most websites are crap
-  * HTML was originally intended for "dumb" end-users 
+  * HTML was originally intended for "dumb" end-users
     * Mozilla and Micro$oft browsers just ignores errors
     * Google browsers followed in this tradition
 * goal for today is to set up node.js environment
@@ -358,48 +358,48 @@ script too heavy handed with my shell dotfiles. There is a 3rd party
 
 The default npm that comes with Pop!OS is way too old.
 
-```
-   $ node --version
-   v18.19.1
-   $ npm --version
-   9.2.0
+```fish
+    $ node --version
+    v18.19.1
+    $ npm --version
+    9.2.0
 ```
 
 From the [Node.js Download](https://nodejs.org/en/download) I down
 loaded the latest LTS version: v22.14.0 and unpacked the tarball here:
 `~/devel/node_lts`. After unpacking
 
+```fish
+    $ cd ~/devel/node_lts
+
+    $ ls
+    node-v22.14.0-linux-x64  node-v22.14.0-linux-x64.tar.xz
+
+    $ ls node-v22.14.0-linux-x64/
+    bin  CHANGELOG.md  include  lib  LICENSE  README.md  share
+
+    $ ls node-v22.14.0-linux-x64/bin
+    corepack  node  npm  npx
+
+    $ ls -l node-v22.14.0-linux-x64/bin/
+    total 117364
+    lrwxrwxrwx 1 grs grs        45 Feb 10 17:08 corepack -> ../lib/node_modules/corepack/dist/corepack.js
+    -rwxr-xr-x 1 grs grs 120177224 Feb 10 17:08 node
+    lrwxrwxrwx 1 grs grs        38 Feb 10 17:08 npm -> ../lib/node_modules/npm/bin/npm-cli.js
+    lrwxrwxrwx 1 grs grs        38 Feb 10 17:08 npx -> ../lib/node_modules/npm/bin/npx-cli.js
+
+    $ file npm corepack npx node
+    npm:      symbolic link to ../lib/node_modules/npm/bin/npm-cli.js
+    corepack: symbolic link to ../lib/node_modules/corepack/dist/corepack.js
+    npx:      symbolic link to ../lib/node_modules/npm/bin/npx-cli.js
+    node:     ELF 64-bit LSB executable, x86-64, version 1 (GNU/Linux),
+              dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2,
+              BuildID[sha1]=ea9b4310844c696f0a090a9ee624f49bd3d7ab52,
+              for GNU/Linux 3.2.0, with debug_info, not stripped, too many
+              notes (256)
 ```
-   $ cd ~/devel/node_lts
 
-   $ ls
-   node-v22.14.0-linux-x64  node-v22.14.0-linux-x64.tar.xz
-
-   $ ls node-v22.14.0-linux-x64/
-   bin  CHANGELOG.md  include  lib  LICENSE  README.md  share
-
-   $ ls node-v22.14.0-linux-x64/bin
-   corepack  node  npm  npx
-
-   $ ls -l node-v22.14.0-linux-x64/bin/
-   total 117364
-   lrwxrwxrwx 1 grs grs        45 Feb 10 17:08 corepack -> ../lib/node_modules/corepack/dist/corepack.js
-   -rwxr-xr-x 1 grs grs 120177224 Feb 10 17:08 node
-   lrwxrwxrwx 1 grs grs        38 Feb 10 17:08 npm -> ../lib/node_modules/npm/bin/npm-cli.js
-   lrwxrwxrwx 1 grs grs        38 Feb 10 17:08 npx -> ../lib/node_modules/npm/bin/npx-cli.js
-
-   $ file npm corepack npx node
-   npm:      symbolic link to ../lib/node_modules/npm/bin/npm-cli.js
-   corepack: symbolic link to ../lib/node_modules/corepack/dist/corepack.js
-   npx:      symbolic link to ../lib/node_modules/npm/bin/npx-cli.js
-   node:     ELF 64-bit LSB executable, x86-64, version 1 (GNU/Linux),
-             dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2,
-             BuildID[sha1]=ea9b4310844c696f0a090a9ee624f49bd3d7ab52,
-             for GNU/Linux 3.2.0, with debug_info, not stripped, too many
-             notes (256)
-```
-
-What the hell are `corepack` and `npx`? 
+What the hell are `corepack` and `npx`?
 
 * `corepack` is an opt-in experimental Node.js script
   * bridges Node.js projects and the package manager
@@ -412,4 +412,59 @@ environment.
 
 Next I updated my fish environment to find the LTS stable environment
 before the system node infrastructure.
+
+### 2025-02-21:
+
+#### Kiddie scripting a Node.js application
+
+From the [HTML Dog](https://www.htmldog.com/guides/javascript/advanced/node/)
+website, I copied/pasted into `./bin/hw_server1.js` the following
+script:
+
+```javascript
+    var http = require('http');
+
+    var server = http.createServer(function (req, res) {
+        res.writeHead(200, {'Content-Type': 'text/plain'});
+        res.end('Hello World\n');
+    })
+
+    server.listen(16666, '127.0.0.1');
+
+    console.log('Server running at http://127.0.0.1:16666/');
+```
+
+Where I changed the port number in the example from 1337 to 16666
+
+Running the command
+
+```fish
+    $ node bin/hw_server1.jsvx
+    Server running at http://127.0.0.1:16666
+    ^C
+```
+
+displayed the text `Hello World` in both the Brave and Firefox browsers.
+Also, `http://localhost:16666` worked.
+
+Note that changing the port to 6666 resulted in Firefox displaying
+
+```
+    This address is restricted
+
+    This address uses a network port which is normally used for purposes
+    other than Web browsing. Firefox has canceled the request for your
+    protection.
+```
+
+and Brave displayed
+
+```
+    This site can’t be reached
+
+    The webpage at http://127.0.0.1:6666/ might be temporarily down or it
+    may have moved permanently to a new web address.
+
+    ERR_UNSAFE_PORT
+```
 
