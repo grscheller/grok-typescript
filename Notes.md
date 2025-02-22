@@ -468,3 +468,9 @@ and Brave displayed
     ERR_UNSAFE_PORT
 ```
 
+Next created `./bin/hw_server2.js` where I replaced `127.0.0.1` with the
+IP address of my `godel2` workstation. This one displays "Hello World!!!"
+to distinguish it from the other.
+
+It worked and is distinct from `localhost`.
+
