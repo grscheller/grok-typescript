@@ -5,6 +5,7 @@ var server = http.createServer(function (req, res) {
     res.end('Hello World\n');
 })
 
-server.listen(16666, '127.0.0.1');
+server.listen(8007, 'localhost');
 
-console.log('Server running at http://127.0.0.1:16666');
+console.log('Server running at http://localhost:8007');
+

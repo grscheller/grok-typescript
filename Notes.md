@@ -415,7 +415,7 @@ before the system node infrastructure.
 
 ### 2025-02-21:
 
-#### Kiddie scripting a Node.js application
+#### Kiddie scripting Node.js applications
 
 From the [HTML Dog](https://www.htmldog.com/guides/javascript/advanced/node/)
 website, I copied/pasted into `./bin/hw_server1.js` the following
@@ -473,4 +473,27 @@ IP address of my `godel2` workstation. This one displays "Hello World!!!"
 to distinguish it from the other.
 
 It worked and is distinct from `localhost`.
+
+
+### 2025-02-23:
+
+#### Continue kiddie scripting Node.js applications
+
+Changed `hw_server1.js` and `hw_server2.js` to use port 8007.
+
+From: `https://www.portnumbers.info/`
+
+Port number 8007 is often associated with custom application development
+and is frequently utilized for various web services and APIs. Unlike
+standard ports that may have well-defined uses, such as HTTP on port 80
+or HTTPS on port 443, port 8007 provides developers with an open
+platform to test and deploy their applications without the risk of
+conflict with widely used services.
+
+Factoids:
+
+* Pop!OS is uses an IP6 address for `localhost`
+* `localhost` on Pop!OS is `::1` and not `127.0.0.1`
+* web browser access IP6 addresses surrounding the address with `[]`
+  * On Pop!OS `http://[::1]:8007/` same as `http://localhost:8007/`
 
