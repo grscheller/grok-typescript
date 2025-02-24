@@ -28,3 +28,4 @@ See [LICENSE](LICENSE) for details.
 ---
 
 [1]: https://grscheller.github.io/grok-typescript/
+

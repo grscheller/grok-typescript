@@ -264,7 +264,7 @@ ___
 
 ### 2024-02-08:
 
-#### Fixed my dates project working
+#### Fixed dates project
 
 Got the
 [Now webpage](https://grscheller.github.io/grok-typescript/date/now.html)
@@ -457,7 +457,7 @@ Note that changing the port to 6666 resulted in Firefox displaying
     protection.
 ```
 
-and Brave displayed
+Brave displayed
 
 ```
     This site can’t be reached
@@ -496,4 +496,129 @@ Factoids:
 * `localhost` on Pop!OS is `::1` and not `127.0.0.1`
 * web browser access IP6 addresses surrounding the address with `[]`
   * On Pop!OS `http://[::1]:8007/` same as `http://localhost:8007/`
+
+### 2025-02-23:
+
+#### Commandline processing
+
+Creating two new JavaScript programs to list out the commandline past to
+the program. Will develop them in parallel.
+
+* parseArgs.js
+* parseYargs.js
+
+The first will not use any external dependencies. The second will
+install a package named yarn
+
+##### First let's install yard
+
+```
+$ cd ~/devel/grok/grok-typescript/bin/
+$ npm install yargs
+
+added 16 packages in 1s
+```
+
+Hummm... 16 external packages needed for just a commandline parser?!
+Seems a bit excessive. Maybe at some point I will write a standalone
+package for commandline parsing. If I do, it will be in its own GitHub
+repo before publishing on npm.
+
+Let's find where these were put.
+
+```
+$ cd ~/.config
+$ fd yargs
+
+$ cd ~/.local
+$ fd yargs
+state/nvim/undo/%home%grs%devel%grok%grok-typescript%bin%parseYargs.js
+
+$ cd ~/devel/node_lts/node-v22.14.0-linux-x64/
+$ fd yarg
+
+$ cd ~/devel/grok/grok-typescript/
+$ ls
+bin  docs  LICENSE  notes  Notes.md  README.md
+$ fd yarg
+bin/node_modules/yargs/
+bin/node_modules/yargs/build/lib/typings/yargs-parser-types.js
+bin/node_modules/yargs/build/lib/yargs-factory.js
+```
+
+Was not expecting such "localized" behavior from npm. From the commands
+`npm help npm` and `npm help folders` I get these factoids:
+
+* npm is the package manager for the Node JavaScript platform
+  * it puts modules in place so that node can find them
+  * it manages dependency conflicts intelligently
+* npm comes pre-configured to use the npm public registry by default
+  * `https://registry.npmjs.org`
+* installation directories
+  * local install (default): install in `./node_modules` of the current package root
+    * install it locally if you're going to require() it
+  * global install (with -g): install in /usr/local or wherever node is installed
+    * install it globally if you're going to run it on the command line
+  * if you need to install both globally & locally, either
+    * install it in both places, or use npm link
+ * whenever I am to publish something
+   * start by reading `npm help publish`
+
+Two files were created, `package.json` and  `package-lock.json`
+
+The first json file, `package.json` contains
+
+```
+    {
+      "dependencies": {
+        "yargs": "^17.7.2"
+      }
+    }
+```
+
+The second json file, `package-lock.json` contains the same plus all of
+the `yargs` dependencies. Seems that multiple versions of the same
+dependency can be installed.
+
+##### Restructuring project
+
+Just throwing my executables into a `bin/` directory is not going to cut
+it.
+
+* renaming `bin/` -> `projects/`
+* moving `hw_server1.js` and `hw_server2.js` -> `projects/hw`
+* moving `parseArgs.js` and `parseYargs.js` -> `projects/args`
+
+Will need to eventually create README.md files for each project. Will
+commit `package.json` and `package-lock.json` in GIT but have README.md
+suggest to blow them away.
+
+##### Next, lets code
+
+### 2025-02-23:
+
+#### Using TypeScript directly with node
+
+From: `https://nodejs.org/en/learn/typescript/run-natively`
+
+Since V22.6.0, Node.js has experimental support for some TypeScript
+syntax via "type stripping". You can write code that's valid TypeScript
+directly in Node.js without the need to transpile it first.
+
+The --experimental-strip-types flag tells Node.js to strip the type
+annotations from the TypeScript code before running it.
+
+In V22.7.0 this experimental support was extended to transform
+TypeScript-only syntax, like enums and namespace, with the addition of
+the `--experimental-transform-types` flag. Enabling this flag
+automatically implies that `--experimental-strip-types` is enabled.
+
+From V23 onward, the `--experimental-strip-types` flag is enabled by
+default. Disable it via `--no-experimental-strip-types` flag).
+enabling you to run any supported syntax.
+
+However, running any code that requires transformations will
+still need the `--experimental-transform-type` flag.
+
+Currently using the latest LTS release: v22.14.0
 
