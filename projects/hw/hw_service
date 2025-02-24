@@ -1,0 +1,20 @@
+#!/usr/bin/env -S node --experimental-transform-types
+
+import { parseArgs } from 'node:util'
+import * as http from 'http'
+
+// var http = require('http');
+const args = process.argv.slice(2);
+
+args.forEach((arg, index) => {
+    console.log(`Argument ${index}: ${arg}`);
+});
+
+var server = http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello World!\n');
+})
+
+server.listen(8007, 'localhost');
+console.log('Server running at http://localhost:8007');
+
