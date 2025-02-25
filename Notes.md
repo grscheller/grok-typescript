@@ -622,3 +622,56 @@ still need the `--experimental-transform-type` flag.
 
 Currently using the latest LTS release: v22.14.0
 
+### 2025-02-23:
+
+#### parseArgs
+
+Consolidated projects cmd_line_args and hw. Now using the shebang file
+`hw/hw_server` to give my "Hello World!" server commandline processing.
+So far just printing out what was past.
+
+```bash
+    $ ./hw_service --name=Foofoo -l --logfile=foofoo
+    {
+      values: [Object: null prototype] {
+        name: 'Foofoo',
+        log: true,
+        logfile: 'foofoo'
+      },
+      positionals: []
+    }
+    ^C                                                              …grs@hamilton4: ~/devel/grok/grok-typescript/projects/hw] (main =)
+    $ ./hw_service --name=Foofoo --logfile=foofoo -l
+    {
+      values: [Object: null prototype] {
+        name: 'Foofoo',
+        logfile: 'foofoo',
+        log: true
+      },
+      positionals: []
+    }
+    ^C
+    $ ./hw_service --name=Boo --logfile boo
+    {
+      values: [Object: null prototype] { name: 'Boo', logfile: 'boo' },
+      positionals: []
+    }
+    ^C
+```
+
+Some observations:
+
+* is the JS/TS culture 2 space indentation
+  * 4 seems too big
+  * 2 seems too small
+  * 3 is just right
+  * maybe see what prettier and eslint default to
+* in the case commandline scripts no sense "capturing" parsing errors
+  * use cases are for
+    * tooling
+    * testing code
+    * bench marking
+* single and double quotes do the same thing
+* logged values seem to be consistently JSON.
+  * should I prefer single quotes
+
