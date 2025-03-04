@@ -337,6 +337,8 @@ Instead of Arch Linux, I have moved to the Alpha version of Pop!OS.
 The current version of npm installed on Pop!OS is 9.2.0. The latest
 LTS version is 22.14.0 and latest development version is 23.8.0.
 
+---
+
 ### 2025-02-20:
 
 * getting a feel for what I previously wrote
@@ -347,6 +349,8 @@ LTS version is 22.14.0 and latest development version is 23.8.0.
     * Mozilla and Micro$oft browsers just ignores errors
     * Google browsers followed in this tradition
 * goal for today is to set up node.js environment
+
+---
 
 ### 2025-02-20:
 
@@ -413,6 +417,8 @@ environment.
 Next I updated my fish environment to find the LTS stable environment
 before the system node infrastructure.
 
+---
+
 ### 2025-02-21:
 
 #### Kiddie scripting Node.js applications
@@ -474,6 +480,7 @@ to distinguish it from the other.
 
 It worked and is distinct from `localhost`.
 
+---
 
 ### 2025-02-23:
 
@@ -497,6 +504,8 @@ Factoids:
 * web browser access IP6 addresses surrounding the address with `[]`
   * On Pop!OS `http://[::1]:8007/` same as `http://localhost:8007/`
 
+---
+
 ### 2025-02-23:
 
 #### Commandline processing
@@ -508,9 +517,9 @@ the program. Will develop them in parallel.
 * parseYargs.js
 
 The first will not use any external dependencies. The second will
-install a package named yarn
+install a package named yargs
 
-##### First let's install yard
+##### First let's install yargs
 
 ```
 $ cd ~/devel/grok/grok-typescript/bin/
@@ -595,6 +604,8 @@ suggest to blow them away.
 
 ##### Next, lets code
 
+---
+
 ### 2025-02-23:
 
 #### Using TypeScript directly with node
@@ -621,6 +632,8 @@ However, running any code that requires transformations will
 still need the `--experimental-transform-type` flag.
 
 Currently using the latest LTS release: v22.14.0
+
+---
 
 ### 2025-02-23:
 
@@ -674,4 +687,33 @@ Some observations:
 * single and double quotes do the same thing
 * logged values seem to be consistently JSON.
   * should I prefer single quotes
+
+---
+
+### 2025-03-04:
+
+#### Starting project to learn Typescript language
+
+Project to finally start to learn the syntax of Typescript. Why not
+learn Javascript first?
+
+* TS is a strict super set of JS
+* TS is a typed and I like typed language, especially those which
+  * you can do FP
+  * have type inference
+  * have good Neovim tooling
+* JS seems to be morphing into TS
+* Too much ugly, hacked up JS code in the wild
+  * not looking for jobs maintaining hacked up kiddie scripted JS
+
+##### Project details
+
+* name: lang
+* location: `projects/lang/`
+* purpose: to learn the type script language
+* notes: `notes/lang/`
+* references: 
+  * [TS for JS Progammers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+
+---
 
