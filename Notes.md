@@ -411,7 +411,7 @@ What the hell are `corepack` and `npx`?
 * `npx` allows Node.js packages to be run without installing them globally
   * `npm` is a package manager for installing and managing dependencies
 
-I'll ignore `corepack` and `npx` for now. I'd rather control my
+I'll ignore `corepack` and `npx` for now. I'd rather control my own
 environment.
 
 Next I updated my fish environment to find the LTS stable environment
@@ -653,7 +653,7 @@ So far just printing out what was past.
       },
       positionals: []
     }
-    ^C                                                              …grs@hamilton4: ~/devel/grok/grok-typescript/projects/hw] (main =)
+    ^C
     $ ./hw_service --name=Foofoo --logfile=foofoo -l
     {
       values: [Object: null prototype] {
@@ -674,9 +674,9 @@ So far just printing out what was past.
 
 Some observations:
 
-* is the JS/TS culture 2 space indentation
+* seems that JS/TS culture uses 2 space indentation
   * 4 seems too big
-  * 2 seems too small
+  * 2 seems too cramped
   * 3 is just right
   * maybe see what prettier and eslint default to
 * in the case commandline scripts no sense "capturing" parsing errors
